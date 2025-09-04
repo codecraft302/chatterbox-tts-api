@@ -36,7 +36,7 @@ services:
 
     volumes:
       # Mount voice sample file (optional)
-      - ${VOICE_SAMPLE_HOST_PATH:-../voice-sample.mp3}:/app/voice-sample.mp3:ro
+      #- ${VOICE_SAMPLE_HOST_PATH:-../voice-sample.mp3}:/app/voice-sample.mp3:ro
 
       # Mount model cache for persistence
       - chatterbox-models:${MODEL_CACHE_DIR:-/cache}
@@ -45,7 +45,7 @@ services:
       - chatterbox-voices:${VOICE_LIBRARY_DIR:-/voices}
 
       # Optional: Mount custom voice samples directory (legacy)
-      - ${VOICE_SAMPLES_DIR:-../voice-samples}:/app/voice-samples:ro
+      #- ${VOICE_SAMPLES_DIR:-../voice-samples}:/app/voice-samples:ro
 
     # GPU support (uncomment if you have NVIDIA GPU)
     # deploy:
